@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - FinPlay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="onboarding">
+        <div class="onboarding-card">
+            <div class="step-indicator">Step <span id="currentStep">1</span> of 5</div>
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1"></div>
+                <div class="progress-step" data-step="2"></div>
+                <div class="progress-step" data-step="3"></div>
+                <div class="progress-step" data-step="4"></div>
+                <div class="progress-step" data-step="5"></div>
+            </div>
+
+            <div class="step active" data-step="1">
+                <h2>Welcome! Let's Get Started</h2>
+                <p class="step-subtitle">What should we call you?</p>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" autocomplete="off">
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-primary" id="step1Next" disabled>
+                        Continue
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="step" data-step="2">
+                <h2>Financial Knowledge</h2>
+                <p class="step-subtitle">Tell us about your current level</p>
+                <div class="radio-group" id="knowledgeGroup">
+                    <label class="radio-option" data-value="Beginner">
+                        <input type="radio" name="knowledge" value="Beginner">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Beginner - I'm just starting out</span>
+                    </label>
+                    <label class="radio-option" data-value="Some Knowledge">
+                        <input type="radio" name="knowledge" value="Some Knowledge">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Some Knowledge - I know the basics</span>
+                    </label>
+                    <label class="radio-option" data-value="Intermediate">
+                        <input type="radio" name="knowledge" value="Intermediate">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Intermediate - I manage my finances</span>
+                    </label>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" id="step2Back">Back</button>
+                    <button class="btn btn-primary" id="step2Next" disabled>Continue</button>
+                </div>
+            </div>
+
+            <div class="step" data-step="3">
+                <h2>About You</h2>
+                <p class="step-subtitle">Help us personalize your experience</p>
+                
+                <div class="question-group">
+                    <h4>What's your current life stage?</h4>
+                    <div class="radio-group" id="lifeStageGroup">
+                        <label class="radio-option" data-value="Student">
+                            <input type="radio" name="lifeStage" value="Student">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Student</span>
+                        </label>
+                        <label class="radio-option" data-value="Just Started Working">
+                            <input type="radio" name="lifeStage" value="Just Started Working">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Just Started Working (0-2 years)</span>
+                        </label>
+                        <label class="radio-option" data-value="Young Professional">
+                            <input type="radio" name="lifeStage" value="Young Professional">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Young Professional (2-5 years)</span>
+                        </label>
+                        <label class="radio-option" data-value="Independent Adult">
+                            <input type="radio" name="lifeStage" value="Independent Adult">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Independent Adult</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <h4>What's your primary financial goal?</h4>
+                    <div class="radio-group" id="goalGroup">
+                        <label class="radio-option" data-value="Learn to Budget">
+                            <input type="radio" name="goal" value="Learn to Budget">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Learn to Budget</span>
+                        </label>
+                        <label class="radio-option" data-value="Start Saving">
+                            <input type="radio" name="goal" value="Start Saving">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Start Saving</span>
+                        </label>
+                        <label class="radio-option" data-value="Begin Investing">
+                            <input type="radio" name="goal" value="Begin Investing">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Begin Investing</span>
+                        </label>
+                        <label class="radio-option" data-value="Manage Debt">
+                            <input type="radio" name="goal" value="Manage Debt">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">Manage Debt</span>
+                        </label>
+                        <label class="radio-option" data-value="All of the Above">
+                            <input type="radio" name="goal" value="All of the Above">
+                            <span class="radio-custom"></span>
+                            <span class="radio-label">All of the Above</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="step-actions">
+                    <button class="btn btn-secondary" id="step3Back">Back</button>
+                    <button class="btn btn-primary" id="step3Next" disabled>Continue</button>
+                </div>
+            </div>
+
+            <div class="step" data-step="4">
+                <h2>Set Your Monthly Income</h2>
+                <p class="step-subtitle">Choose an income that feels realistic for you</p>
+                
+                <div class="income-presets" id="incomePresets">
+                    <button class="income-preset" data-value="10000">
+                        <span class="preset-amount">₹10,000</span>
+                        <span class="preset-label">Student / Beginner</span>
+                    </button>
+                    <button class="income-preset" data-value="15000">
+                        <span class="preset-amount">₹15,000</span>
+                        <span class="preset-label">Part-time / Entry</span>
+                    </button>
+                    <button class="income-preset" data-value="25000">
+                        <span class="preset-amount">₹25,000</span>
+                        <span class="preset-label">Early Career</span>
+                    </button>
+                    <button class="income-preset" data-value="40000">
+                        <span class="preset-amount">₹40,000</span>
+                        <span class="preset-label">Working Professional</span>
+                    </button>
+                    <button class="income-preset" data-value="60000">
+                        <span class="preset-amount">₹60,000</span>
+                        <span class="preset-label">Experienced</span>
+                    </button>
+                    <button class="income-preset" data-value="100000">
+                        <span class="preset-amount">₹1,00,000</span>
+                        <span class="preset-label">High Income</span>
+                    </button>
+                    <button class="income-preset income-preset-custom" data-value="custom" id="customIncomeToggle">
+                        <span class="preset-amount">Custom</span>
+                        <span class="preset-label">Set your own amount</span>
+                    </button>
+                </div>
+
+                <div class="custom-income-input" id="customIncomeContainer" style="display: none;">
+                    <label for="customIncome">Enter amount (₹5,000 – ₹2,00,000)</label>
+                    <input type="number" id="customIncome" min="5000" max="200000" step="1000" placeholder="Enter amount">
+                </div>
+
+                <p class="income-note">This is a simulation. Choosing a realistic income helps you learn habits that match real life.</p>
+
+                <div class="step-actions">
+                    <button class="btn btn-secondary" id="step4Back">Back</button>
+                    <button class="btn btn-primary" id="step4Next" disabled>Continue</button>
+                </div>
+            </div>
+
+            <div class="step" data-step="5">
+                <h2>Your Profile</h2>
+                <p class="step-subtitle">Here's your virtual financial identity</p>
+                
+                <div class="summary-card">
+                    <div class="summary-row">
+                        <span class="summary-label">Name</span>
+                        <span class="summary-value" id="summaryName">-</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Knowledge Level</span>
+                        <span class="summary-value" id="summaryKnowledge">-</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Life Stage</span>
+                        <span class="summary-value" id="summaryLifeStage">-</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Primary Goal</span>
+                        <span class="summary-value" id="summaryGoal">-</span>
+                    </div>
+                </div>
+
+                <div class="summary-highlight">
+                    <div class="highlight-title">YOUR MONTH 1 INCOME</div>
+                    <div class="highlight-grid highlight-grid-simple">
+                        <div class="highlight-item highlight-item-primary">
+                            <div class="highlight-value" id="summaryIncome">₹30,000</div>
+                            <div class="highlight-label">Monthly Income</div>
+                            <div class="highlight-helper">This will be added at the start of each month</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-value">Level 1</div>
+                            <div class="highlight-label">Budgeting Basics</div>
+                        </div>
+                    </div>
+                    <p class="zero-start-note">FinPlay starts with no money on purpose. This lets you see how habits, decisions, and consistency create wealth over time.</p>
+                </div>
+
+                <div class="step-actions">
+                    <button class="btn btn-secondary" id="step5Back">Back</button>
+                    <button class="btn btn-primary" id="submitBtn">
+                        Start My Journey
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/onboarding.js"></script>
+</body>
+</html>
