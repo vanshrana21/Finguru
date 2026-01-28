@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinPlay - Financial Literacy Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css">
+  
+</head>
+<body class="text-slate-400 antialiased selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden relative">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-emerald-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-[40%] left-[-10%] w-[400px] h-[400px] bg-slate-800/20 rounded-full blur-[100px]"></div>
+        <div class="absolute inset-0 bg-noise z-0"></div>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded bg-gradient-to-tr from-emerald-500 to-blue-500 flex items-center justify-center text-white text-xs font-bold">F</div>
+                <span class="text-white font-medium tracking-tight">FinPlay</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#features" class="nav-link hover:text-white transition-colors">Features</a>
+                <a href="#how-it-works" class="nav-link hover:text-white transition-colors">How it Works</a>
+                <a href="#demo" class="nav-link hover:text-white transition-colors">Demo</a>
+            </div>
+            <button id="navDemoBtn" class="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-all border border-white/5 focus:outline-none focus:ring-2 focus:ring-white/20">
+                Try Demo
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-28 px-6">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-8">
+                <iconify-icon icon="solar:gamepad-linear" width="14"></iconify-icon>
+                <span>Interactive Simulator v1.0</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tight mb-6 leading-[1.08]">
+                Learn Money by Living It<br>
+                <span class="text-slate-500">Without Losing Any.</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                FinPlay is a financial decision simulator where habits, choices, and consistency matter more than luck. Practice budgeting, saving, and investing in a safe environment.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/onboarding" class="btn-primary-cta w-full sm:w-auto px-8 py-3 bg-white text-slate-950 rounded-full font-medium flex items-center justify-center gap-2 group">
+                    Start Your Financial Journey
+                    <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <button id="heroDemoBtn" class="btn-secondary-cta w-full sm:w-auto px-8 py-3 bg-transparent border border-white/10 text-white rounded-full font-medium">
+                    Try Demo Mode
+                </button>
+            </div>
+            <p class="text-xs text-slate-500 mt-4">No real money &bull; No sign-up required for demo</p>
+        </div>
+
+        <div class="mt-16 md:mt-20 max-w-5xl mx-auto relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+            <div class="relative rounded-xl border border-white/10 bg-slate-950/50 backdrop-blur-xl aspect-[16/9] md:aspect-[21/9] flex items-center justify-center overflow-hidden">
+                <div class="grid grid-cols-3 gap-8 w-3/4 opacity-50">
+                    <div class="h-32 rounded-lg bg-gradient-to-b from-emerald-500/20 to-transparent border-t border-emerald-500/30"></div>
+                    <div class="h-48 rounded-lg bg-gradient-to-b from-blue-500/20 to-transparent border-t border-blue-500/30 mt-[-20px]"></div>
+                    <div class="h-40 rounded-lg bg-gradient-to-b from-purple-500/20 to-transparent border-t border-purple-500/30"></div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-6xl mx-auto"></div>
+
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">Why FinPlay is Different</h2>
+                <p class="text-slate-400 max-w-xl">Most tools track what you spent. We teach you how to spend.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-start gap-4 min-h-[200px]">
+                    <div class="p-3 bg-emerald-500/10 rounded-lg text-emerald-400">
+                        <iconify-icon icon="solar:gamepad-charge-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium mb-2">Learn by Doing</h3>
+                        <p class="text-sm leading-relaxed">Make real financial decisions in a simulated world. Experience outcomes without risk.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-start gap-4 min-h-[200px]">
+                    <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400">
+                        <iconify-icon icon="solar:hourglass-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium mb-2">Compressed Time</h3>
+                        <p class="text-sm leading-relaxed">Simulate years in minutes. See compounding, mistakes, and recovery clearly.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-start gap-4 min-h-[200px]">
+                    <div class="p-3 bg-amber-500/10 rounded-lg text-amber-400">
+                        <iconify-icon icon="solar:chart-square-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium mb-2">Behavior > Balance</h3>
+                        <p class="text-sm leading-relaxed">FinPlay focuses on decisions, habits, and psychology, not just math.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-start gap-4 min-h-[200px]">
+                    <div class="p-3 bg-rose-500/10 rounded-lg text-rose-400">
+                        <iconify-icon icon="solar:heart-angle-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium mb-2">No Shame.</h3>
+                        <p class="text-sm leading-relaxed">There are no penalties, no guilt, no failure -- only data points for learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-6xl mx-auto"></div>
+
+    <section id="features" class="py-24 px-6 relative overflow-hidden">
+        <div class="absolute right-0 top-1/3 w-[500px] h-[500px] bg-emerald-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-semibold text-white tracking-tight mb-12 text-center">What You'll Experience</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <div class="glass-card p-8 rounded-2xl col-span-1 md:col-span-2 lg:col-span-1 min-h-[180px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-medium">Monthly Income Sim</h3>
+                        <iconify-icon icon="solar:wallet-money-linear" class="text-emerald-400" width="24"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-slate-400">Choose your income level and make monthly allocation decisions. Feel the pressure of finite resources.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl min-h-[180px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-medium">Reverse Wallet</h3>
+                        <iconify-icon icon="solar:shield-check-linear" class="text-blue-400" width="24"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-slate-400">Automatically protect a portion of income before you can spend it. The "Pay Yourself First" principle in action.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl min-h-[180px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-medium">Temptation Locks</h3>
+                        <iconify-icon icon="solar:lock-password-linear" class="text-rose-400" width="24"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-slate-400">Set hard limits on risky spending categories. Build discipline through system design.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl min-h-[180px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-medium">Investing Playground</h3>
+                        <iconify-icon icon="solar:graph-new-up-linear" class="text-purple-400" width="24"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-slate-400">Experiment with stocks, FDs, and diversified assets without risking a single real dollar.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl col-span-1 md:col-span-2 min-h-[180px]">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="text-white font-medium">Life Events Simulation</h3>
+                            <p class="text-sm text-slate-400 mt-2">Unexpected expenses, bonuses, medical emergencies, or job offers. FinPlay throws curveballs just like real life to test your emergency fund preparedness.</p>
+                        </div>
+                        <div class="p-2 bg-slate-800 rounded-lg flex-shrink-0 ml-4">
+                            <iconify-icon icon="solar:bolt-linear" class="text-yellow-400" width="24"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl min-h-[180px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-medium">Time-Travel Letters</h3>
+                        <iconify-icon icon="solar:letter-linear" class="text-slate-300" width="24"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-slate-400">Write messages to your future self about your financial goals and receive them later in the simulation.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-6xl mx-auto"></div>
+
+    <section id="how-it-works" class="py-24 px-6 bg-slate-900/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-semibold text-white tracking-tight mb-16 text-center">Your Financial Journey</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent -z-10"></div>
+
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-slate-900 border border-white/10 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-black/50 z-10">
+                        <iconify-icon icon="solar:user-circle-linear" class="text-white" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-[120px] font-bold text-white/[0.03] pointer-events-none select-none">1</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Set Your Profile</h3>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Choose your starting income, define your goals, and set your experience level.</p>
+                </div>
+
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-slate-900 border border-white/10 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-black/50 z-10">
+                        <iconify-icon icon="solar:slider-minimalistic-horizontal-linear" class="text-white" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-[120px] font-bold text-white/[0.03] pointer-events-none select-none">2</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Make Monthly Decisions</h3>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Budget, allocate savings, invest wisely, and respond to life events.</p>
+                </div>
+
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-slate-900 border border-white/10 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-black/50 z-10">
+                        <iconify-icon icon="solar:chart-2-linear" class="text-white" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 text-[120px] font-bold text-white/[0.03] pointer-events-none select-none">3</div>
+                    <h3 class="text-lg font-medium text-white mb-2">See Long-Term Impact</h3>
+                    <p class="text-sm text-slate-400 max-w-xs mx-auto">Visual insights show how your habits compound over 5, 10, or 20 years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-6xl mx-auto"></div>
+
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="w-full lg:w-1/2">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium mb-6">
+                    <iconify-icon icon="solar:lightbulb-linear" width="14"></iconify-icon>
+                    <span>Deep Analytics</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-6">Understand Your Decisions</h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    FinPlay doesn't just give you a balance sheet. It analyzes your financial psychology. Are you too conservative? Do you panic sell? Do you neglect your emergency fund?
+                </p>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-emerald-500 mt-1 flex-shrink-0" width="20"></iconify-icon>
+                        <div>
+                            <strong class="text-white font-medium block">Financial Health Score</strong>
+                            <span class="text-sm text-slate-500">A holistic metric beyond just net worth.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-emerald-500 mt-1 flex-shrink-0" width="20"></iconify-icon>
+                        <div>
+                            <strong class="text-white font-medium block">Decision Consistency</strong>
+                            <span class="text-sm text-slate-500">Track how sticky your good habits are over time.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-emerald-500 mt-1 flex-shrink-0" width="20"></iconify-icon>
+                        <div>
+                            <strong class="text-white font-medium block">Reflections over Failures</strong>
+                            <span class="text-sm text-slate-500">Journaling prompts when goals aren't met.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="w-full lg:w-1/2">
+                <div class="relative rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-8 shadow-2xl">
+                    <div class="flex items-center justify-between mb-8">
+                        <div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1">Total Net Worth</div>
+                            <div class="text-2xl font-semibold text-white">$142,500</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1">Health Score</div>
+                            <div class="text-xl font-semibold text-emerald-400">84/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-end justify-between h-48 gap-2 mb-6">
+                        <div class="w-full bg-slate-800 rounded-t-sm h-[20%] relative group">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Y1</div>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-t-sm h-[35%]"></div>
+                        <div class="w-full bg-slate-800 rounded-t-sm h-[40%]"></div>
+                        <div class="w-full bg-emerald-500/20 rounded-t-sm h-[55%]"></div>
+                        <div class="w-full bg-emerald-500/40 rounded-t-sm h-[65%]"></div>
+                        <div class="w-full bg-emerald-500/60 rounded-t-sm h-[80%]"></div>
+                        <div class="w-full bg-emerald-500 rounded-t-sm h-[95%] relative group">
+                             <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-emerald-600 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Y7</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <div class="text-xs text-slate-400 mb-1">Savings Rate</div>
+                            <div class="text-sm font-medium text-white">22% <span class="text-emerald-500 text-xs">+2%</span></div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <div class="text-xs text-slate-400 mb-1">Emergency Fund</div>
+                            <div class="text-sm font-medium text-white">6 Months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-6xl mx-auto"></div>
+
+    <section id="demo" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-r from-emerald-900/20 to-blue-900/20 border border-emerald-500/20 p-1 md:p-12 text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-10 transition duration-500"></div>
+            
+            <div class="relative z-10 p-6">
+                <div class="inline-block p-3 rounded-full bg-emerald-500/20 text-emerald-400 mb-6">
+                    <iconify-icon icon="solar:play-linear" width="32"></iconify-icon>
+                </div>
+                <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">Try Without Commitment</h2>
+                <p class="text-slate-300 mb-8 max-w-lg mx-auto">Jump into a pre-filled demo profile and explore the FinPlay simulation engine instantly. No sign-up required.</p>
+                
+                <button id="demoCTABtn" class="btn-primary-cta inline-block px-8 py-3 bg-white text-slate-950 rounded-full font-medium shadow-lg shadow-white/10">
+                    Start Demo Mode
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight mb-6 leading-tight">Your Financial Intuition Is Built <br><span class="text-slate-600">Not Born.</span></h2>
+            <p class="text-lg text-slate-400 mb-10">FinPlay helps you practice money decisions before they matter in real life. Build the muscle memory of wealth.</p>
+            
+            <a href="/onboarding" class="btn-primary-cta inline-block px-10 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-medium transition-colors shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)]">
+                Start My Journey
+            </a>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 bg-slate-950 py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-5 h-5 rounded bg-slate-800 flex items-center justify-center text-white text-[10px] font-bold">F</div>
+                    <span class="text-slate-300 font-medium tracking-tight">FinPlay</span>
+                </a>
+                
+                <div class="text-sm text-slate-500 text-center">
+                    &copy; 2026 FinPlay. Educational Simulator. Not Financial Advice.
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors focus:outline-none focus:text-white" aria-label="Twitter">
+                        <iconify-icon icon="solar:brand-twitter-linear" width="20"></iconify-icon>
+                    </a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors focus:outline-none focus:text-white" aria-label="GitHub">
+                        <iconify-icon icon="solar:brand-github-linear" width="20"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <p class="text-xs text-slate-600">Simulation only &bull; No financial data collected &bull; Designed for education & behavioral insight</p>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
+    <script src="/JS/index.js"></script>
+    
